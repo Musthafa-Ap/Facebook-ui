@@ -1,6 +1,7 @@
 import 'package:facebook/AppBarMenu.dart';
 import 'package:facebook/HeaderButtons.dart';
 import 'package:facebook/SearchingField.dart';
+import 'package:facebook/StatusSection.dart';
 import 'package:flutter/material.dart';
 import 'CircleImage.dart';
 
@@ -40,7 +41,16 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
             ),
             HeaderButtons(),
-            Divider(thickness: 10,color: Colors.grey[300],)
+            Divider(
+              thickness: 10,
+              color: Colors.grey[300],
+            ),
+            StatusSection(),
+            Divider(
+              thickness: 10,
+              color: Colors.grey[300],
+            ),
+
           ],
         ),
       ),
