@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class CircleImage extends StatelessWidget {
   String img;
   bool displaystatus;
-  CircleImage({this.img,this.displaystatus});
+  bool displayborder;
+  CircleImage({@required this.img,@required this.displaystatus,this.displayborder = false});
   @override
   Widget build(BuildContext context) {
     Widget Statusindicator;
@@ -18,10 +19,10 @@ class CircleImage extends StatelessWidget {
        decoration: BoxDecoration(
            color: Colors.green,
            shape: BoxShape.circle,
-           border:Border.all(
+           border: Border.all(
                color: Colors.greenAccent,
                width: 1
-           )
+           ),
        ),
      ),
    );}
@@ -30,17 +31,25 @@ class CircleImage extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 55,
-          height: 55,
+
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: displayborder ? Border.all(color: Colors.blue,width: 3) : Border(),
+          ),
           child: Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.only(left: 4,right: 4),
+
             child: ClipRRect(
+              borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
                   img,
                   width: 45,
+                  height: 45,
                   fit: BoxFit.cover,
                 ),
-                borderRadius: BorderRadius.circular(100)),
+
+            ),
+
           ),
         ),
         Statusindicator,

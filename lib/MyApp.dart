@@ -1,7 +1,9 @@
 import 'package:facebook/AppBarMenu.dart';
 import 'package:facebook/HeaderButtons.dart';
+import 'package:facebook/MainStorySection.dart';
 import 'package:facebook/SearchingField.dart';
 import 'package:facebook/StatusSection.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'CircleImage.dart';
 
@@ -50,8 +52,7 @@ class MyApp extends StatelessWidget {
               thickness: 10,
               color: Colors.grey[300],
             ),
-
-
+            Mainstorysection(),
           ],
         ),
       ),
