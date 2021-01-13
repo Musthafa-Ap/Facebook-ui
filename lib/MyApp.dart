@@ -1,6 +1,7 @@
 import 'package:facebook/AppBarMenu.dart';
 import 'package:facebook/HeaderButtons.dart';
 import 'package:facebook/MainStorySection.dart';
+import 'package:facebook/PostCards.dart';
 import 'package:facebook/SearchingField.dart';
 import 'package:facebook/StatusSection.dart';
 import 'package:flutter/cupertino.dart';
@@ -53,6 +54,11 @@ class MyApp extends StatelessWidget {
               color: Colors.grey[300],
             ),
             Mainstorysection(),
+            Divider(
+              thickness: 10,
+              color: Colors.grey[300],
+            ),
+            Postcard(name: "Mammootty",img: ("assets/ikka.jpg"),hour: ("5h"),),
           ],
         ),
       ),
