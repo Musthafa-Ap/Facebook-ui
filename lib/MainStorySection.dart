@@ -8,6 +8,7 @@ class Mainstorysection extends StatelessWidget {
     return Container(
       height: 180,
       child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics(),),
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [

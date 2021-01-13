@@ -36,30 +36,34 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Searchingfield(),
-            Divider(
-              thickness: .5,
-              color: Colors.black,
-            ),
-            HeaderButtons(),
-            Divider(
-              thickness: 10,
-              color: Colors.grey[300],
-            ),
-            StatusSection(),
-            Divider(
-              thickness: 10,
-              color: Colors.grey[300],
-            ),
-            Mainstorysection(),
-            Divider(
-              thickness: 10,
-              color: Colors.grey[300],
-            ),
-            Postcard(name: "Mammootty",img: ("assets/ikka.jpg"),hour: ("5h"),),
-          ],
+        body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics(),),
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Searchingfield(),
+              Divider(
+                thickness: .5,
+                color: Colors.black,
+              ),
+              HeaderButtons(),
+              Divider(
+                thickness: 10,
+                color: Colors.grey[300],
+              ),
+              StatusSection(),
+              Divider(
+                thickness: 10,
+                color: Colors.grey[300],
+              ),
+              Mainstorysection(),
+              Divider(
+                thickness: 10,
+                color: Colors.grey[300],
+              ),
+              Postcard(name: "Mammootty",dp: ("assets/ikka.jpg"),hour: ("5h"),),
+            ],
+          ),
         ),
       ),
     );
