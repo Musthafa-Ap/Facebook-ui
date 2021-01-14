@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
                 thickness: 10,
                 color: Colors.grey[300],
               ),
-              Postcard(name: "Mammootty",dp: ("assets/ikka.jpg"),hour: ("5h"),),
+              Postcard(name: "Mammootty",dp: ("assets/ikka.jpg"),hour: ("5h"),postimage: ("assets/ikka2.jpg"),posttitle: "Happy Diwali!!!",),
             ],
           ),
         ),
