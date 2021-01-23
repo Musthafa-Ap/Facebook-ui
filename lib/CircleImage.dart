@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CircleImage extends StatelessWidget {
-  String img;
-  bool displaystatus;
-  bool displayborder;
-  CircleImage({@required this.img,@required this.displaystatus,this.displayborder = false});
+  final String img;
+  final bool displaystatus;
+  final bool displayborder;
+  final double width;
+  final double height;
+  CircleImage({@required this.img,@required this.displaystatus,this.displayborder = false,this.width = 45,this.height = 45});
   @override
   Widget build(BuildContext context) {
     Widget Statusindicator;
@@ -43,8 +45,8 @@ class CircleImage extends StatelessWidget {
               borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
                   img,
-                  width: 45,
-                  height: 45,
+                  width: width,
+                  height: height,
                   fit: BoxFit.cover,
                 ),
 

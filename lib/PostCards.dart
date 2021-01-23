@@ -9,7 +9,11 @@ class Postcard extends StatelessWidget {
   final bool verified;
   final String posttitle;
   final String postimage;
-  Postcard({@required this.dp,@required this.name,@required this.hour,@required this.verified = true,@required this.postimage,@required this.posttitle});
+  final String like;
+  final String comment;
+  final String share;
+  Postcard({@required this.dp,@required this.name,@required this.hour,@required this.verified = true,@required this.postimage,
+    @required this.posttitle,@required this.share,@required this.like,@required this.comment});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,18 +47,24 @@ class Postcard extends StatelessWidget {
                 ),
                 child: Icon(Icons.thumb_up,color: Colors.white,size: 12,),
               ),
-              displaytext(label: "10K")
+              displaytext(label: like)
             ],
           ),
           Container(
             margin: EdgeInsets.only(right: 5),
             child: Row(
               children: [
-                displaytext(label: "1K"),
+                displaytext(label: comment),
                 SizedBox(width: 5,),
                 displaytext(label: "Comments"),
                 SizedBox(width: 5,),
-                displaytext(label: "500 Shares")
+                displaytext(label: share),
+                SizedBox(width: 5,),
+                displaytext(label: "Shares"),
+                SizedBox(width: 8),
+                CircleImage(img: dp,displaystatus: false,width: 18,height: 18,),
+               Icon(Icons.arrow_drop_down)
+
               ],
             ),
           )
