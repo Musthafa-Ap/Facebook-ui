@@ -2,6 +2,8 @@ import 'package:facebook/Bluetick.dart';
 import 'package:facebook/CircleImage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'HeaderButtons.dart';
 class Postcard extends StatelessWidget {
   final String dp;
   final String name;
@@ -13,17 +15,26 @@ class Postcard extends StatelessWidget {
   final String comment;
   final String share;
   Postcard({@required this.dp,@required this.name,@required this.hour,@required this.verified = true,@required this.postimage,
-    @required this.posttitle,@required this.share,@required this.like,@required this.comment});
+    this.posttitle,@required this.share,@required this.like,@required this.comment});
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
         children: [
           postcardheader(),
-          titlesection(),
+          posttitle != null ?titlesection() : SizedBox(),
          imagesection(),
           footersection(),
-
+          Divider(
+            thickness: .5,
+            color: Colors.black,
+          ),
+          HeaderButtons(icon1: Icons.thumb_up,icon2: Icons.comment,icon3: Icons.share,
+            color1: Colors.grey,color2: Colors.grey,color3: Colors.grey,text1: 'Like',text2: 'Comment',text3: 'Share',),
+          Divider(
+            thickness: 10,
+            color: Colors.grey[300],
+          ),
         ],
       ),
     );

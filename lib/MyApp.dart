@@ -46,7 +46,8 @@ class MyApp extends StatelessWidget {
                 thickness: .5,
                 color: Colors.black,
               ),
-              HeaderButtons(),
+              HeaderButtons(icon1: Icons.video_call,icon2: Icons.photo_library,icon3: Icons.video_call,
+                color1: Colors.red,color2: Colors.green,color3: Colors.purple,text1: 'Live',text2: 'Photos',text3: 'Room',),
               Divider(
                 thickness: 10,
                 color: Colors.grey[300],
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.grey[300],
               ),
               Postcard(name: "Mammootty",dp: ("assets/ikka.jpg"),hour: ("5h"),postimage: ("assets/ikka2.jpg"),posttitle: "Happy Diwali!!!",like: "10K",share: "2K",comment: "1K",),
+              Postcard(name: "Mohanlal",dp: ("assets/ettan.jpg"),hour: ("1h"),postimage: ("assets/ettan2.jpg"),like: "8K",share: "1.5K",comment: "3K",),
             ],
           ),
         ),
