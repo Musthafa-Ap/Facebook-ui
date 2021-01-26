@@ -28,7 +28,7 @@ class Storycard extends StatelessWidget {
           Positioned(
 
             child: createstorystatus ? Menu(icon: Icons.add,action: (){print("add story");},Iconcolor: Colors.blue,)
-                : CircleImage(img: profile,displaystatus: false,displayborder: displayborder,)
+                : CircleImage(img: profile,displaystatus: false,displayborder: displayborder,width: 40,height: 40,)
           ),
           Positioned(
             bottom: 10,

@@ -23,7 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  animated_splash: ^1.0.0
+  introduction_screen: ^1.0.9
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -56,12 +57,25 @@ flutter:
      - assets/Prithviraj.jpg
      - assets/Tovino.jpg
      - assets/ikka2.jpg
-     - assets/a.jpg
-     - assets/b.jpg
-     - assets/c.jpg
-     - assets/d.jpg
-     - assets/e.jpg
-
+     - assets/Akhil.jpg
+     - assets/Akhil2.jpg
+     - assets/Nabeel.jpg
+     - assets/Nabeel2.jpg
+     - assets/Amal.jpg
+     - assets/Amal2.jpg
+     - assets/Shibin.jpg
+     - assets/Shibin2.jpg
+     - assets/Musthafa.jpg
+     - assets/Musthafa2.jpg
+     - assets/Shibin3.jpg
+     - assets/Akhil3.jpg
+     - assets/Nabeel3.jpg
+     - assets/Amal3.jpg
+     - assets/Asif2.jpg
+     - assets/Dq2.jpg
+     - assets/Jayasurya2.jpg
+     - assets/Prithviraj2.jpg
+     - assets/Tovino2.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
